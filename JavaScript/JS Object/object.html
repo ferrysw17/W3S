@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Object</title>
-</head>
-<body>
+  </head>
+  <body>
     <p id="demo"></p>
 
     <script>
 
-        const car = {
-            type : "Fiat", 
-            model : 500,
-            color : "white"
+              // const car = {
+              //     type : "Fiat",
+              //     model : 500,
+              //     color : "white"
+              // }
+
+              // let display = "Mobil ini bertipe " + car.model + " dengan merek " +car.type;
+              // // let display = Object.values(car); //bisa seperti ini
+              // document.getElementById("demo").innerHTML = display;
+
+
+              // const person = new Object();
+
+              // person.firstName = "Ferry";
+              // person.age = 20;
+              // person.city = "Purbalingga"
+
+              // const result = Object.values(person);
+
+              // document.getElementById("demo").innerHTML = result;
+
+      const person = {
+
+        firstName : "Ferry",
+        midName : "Setiawan",
+        lastName : "Wijayanto",
+        fullName : function (){
+            return this.firstName + " " + this.midName + " " + this.lastName
         }
+      };
 
-        let display = "Mobil ini bertipe " + car.model + " dengan merek " +car.type;
-        // let display = Object.values(car); //bisa seperti ini
-        document.getElementById("demo").innerHTML = display;
-
+      document.getElementById("demo").innerHTML = person.fullName();
     </script>
-</body>
+  </body>
 </html>
