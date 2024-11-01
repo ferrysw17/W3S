@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+    <script>
+
+        // JS Counstructor penamaan lebih baik dengan huruf pertama kapital
+        function Person (firstName,lastName,age,city){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.city = city;
+
+            // Function Method
+            this.fullName = function(){
+                return this.firstName + " " + this.lastName
+            }
+        }
+
+        const myProfile = new Person("Ferry", "Setiawan W", 20, "Purbalingga");
+        const myMother = new Person("Ropingatun", "", 50, "Purbalingga" )
+
+
+        myMother.nationality = "Indonesia";
+
+        // Menambahkan Method (Method sama saja dengan Function)
+        // myProfile.changeName = function(name){
+        //     this.lastName = name;
+        // }
+
+        Person.prototype.changeName = function(name){
+            this.lastName = name;
+        }
+
+        // Memanggil method baru
+        myProfile.changeName("Aveiro");
+        // Menambahkan proprty baru
+        Person.prototype.earth = "World";
+
+        // Object Values
+        const result = Object.values(myMother);
+
+
+        document.getElementById("demo").innerHTML = myProfile.fullName();
+    </script>
+</body>
+</html>
