@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="length"></p>
+    <p id="escapeText"></p>
+
+
+    <script>
+
+        // Tempelate String (not support in internet Explorer)
+        let text = `My name is "Ferry" it's good name`;
+        let escapeText = "Bobotoh is different with \"Viking\""
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("escapeText").innerHTML = escapeText;
+        document.getElementById("length").innerHTML = text.length;
+    </script>
+</body>
+</html>
