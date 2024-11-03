@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Extracting Part</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+
+        let text = "Ferry Aveiro Dos Santos";
+        let addtext = "Is Good";
+        let part = text.slice(6, 12); //Dari Huruf posisi 6
+        let slice = text.slice(-10); //Ambil semua dari posisi 6 bisa juga negatif
+
+        // Converting text to Uppercase and Lowercase
+        let upper = text.toUpperCase();
+        let lower = text.toLowerCase();
+
+        //JS String concat(); sama dengan menggabungkan dua string dengan tanda +
+        let concat = text.concat(" ", addtext);
+
+
+        //JS String trim();
+        let text1 = "     Hello World     ";
+        let text2 = text1.trim();
+
+
+        document.getElementById("demo").innerHTML= "Text 1 Length = " + text1.length + "<br> Text 2 Length = " +text2.length;
+
+    </script>
+    
+</body>
+</html>
